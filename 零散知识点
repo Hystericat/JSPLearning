@@ -1,0 +1,43 @@
+
+一、java连接数据库
+    1. 导入mysql的jar包（mysql为例）
+    2. 定义4个静态变量(private static final String driver = "com.mysql.jdbc.driver")
+          driver        驱动的名称（不同数据库是不同，固定写法）  
+          url           数据库的网络地址及其数据库的名称         
+          username      数据库用户名                           
+          password      数据库连接密码                         
+         
+          private static final String driver = "com.mysql.jdbc.Driver"; 
+	        private static final String url="jdbc:mysql://localhost:3306/shopping?useUnicode=true&characterEncoding=UTF-8"; 
+	        private static final String username="root";
+	        private static final String password="123456";
+          
+    3. 静态代码块负责加载驱动
+          static{
+              ...
+          }
+          静态代码在类被加载到工程中时被执行，而且执行一次。数据库驱动只要加载一次即可。
+    
+    
+    
+    
+    4. 
+    
+    
+    
+    
+    
+    5.
+    
+          
+二、JSP内置对象 请求重定向与请求转发的区别
+    1. 请求重定向
+        客户端行为，response.sendRedirict()，从本质上讲等同于两次请求，前一次的请求对象不会保存，地址栏url不变
+    2. 请求转发
+        服务器行为，request.getRequestDispatcher().forward(req,resp)，是一次请求，转发后请求对象会保存，地址栏url不变
+        
+    举例说明：
+        重定向：你去了A局，A局人说：“这事儿不归我们管，去B局”，然后你从A退出，去了B局。
+        转  发：你去了A局，A知道这事儿归B局管，但他没有把你退回来，而是他们自己联系B局的人，办完事后，把结果给你。
+        
+        
