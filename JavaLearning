@@ -1,0 +1,16 @@
+一、异常
+    Scanner input = new Scanner(System.in);
+    try{
+        System.out.println("请输入第一个数:");
+        int one = input.nextInt();
+        System.out.println("请输入第二个数:");
+        int two = input.nextInt();
+        System.out.println("两数相除结果:"+ one/two);
+    }catch(InputMIsmatchException e){               //子类
+        System.out.println("请输入整数");
+    }catch(ArithmeticException e){                  //子类
+        System.out.println("除数不能为零");
+    }catch(Exception e){                            //父类
+        System.out.println("不知名异常");
+    }
+    System.out.println("over");
